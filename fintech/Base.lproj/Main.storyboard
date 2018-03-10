@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,109 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fintech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="QMy-lP-R3w" customClass="DesignableImage" customModule="fintech" customModuleProvider="target">
+                                <rect key="frame" x="10" y="54" width="355" height="355"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QMy-lP-R3w" secondAttribute="height" multiplier="1:1" id="X0e-QE-Vjp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maxim Pestryakov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHX-Zt-GGF">
+                                <rect key="frame" x="10" y="419" width="355" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Android Developer in Tinkoff Bank, study at Higher School of Economics " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="359" translatesAutoresizingMaskIntoConstraints="NO" id="ZbT-UF-d7R">
+                                <rect key="frame" x="10" y="453" width="355" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-iI-hjn" customClass="DesignableButton" customModule="fintech" customModuleProvider="target">
+                                <rect key="frame" x="10" y="718" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZRf-ZY-W4k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Редактировать">
+                                    <color key="titleColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1o-2T-DzX" customClass="DesignableButton" customModule="fintech" customModuleProvider="target">
+                                <rect key="frame" x="265" y="309" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.47058823529999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aPj-7C-HaM"/>
+                                    <constraint firstAttribute="width" constant="100" id="o13-fg-RWw"/>
+                                    <constraint firstAttribute="width" secondItem="m1o-2T-DzX" secondAttribute="height" multiplier="1:1" id="zWX-7O-paY"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" image="slr-camera-2-xxl"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scaleAspectFit" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adH-zX-CdU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QMy-lP-R3w" firstAttribute="trailing" secondItem="m1o-2T-DzX" secondAttribute="trailing" id="0Ud-Ux-ahL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4u7-iI-hjn" secondAttribute="trailing" constant="10" id="BsE-Lz-yXc"/>
+                            <constraint firstItem="4u7-iI-hjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="DcE-Zq-zzq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QMy-lP-R3w" secondAttribute="trailing" constant="10" id="FWu-fX-3tl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kHX-Zt-GGF" secondAttribute="trailing" constant="10" id="Jr6-TK-lKq"/>
+                            <constraint firstItem="QMy-lP-R3w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Kmn-cQ-Qk3"/>
+                            <constraint firstItem="ZbT-UF-d7R" firstAttribute="top" secondItem="kHX-Zt-GGF" secondAttribute="bottom" constant="10" id="WMO-QZ-Fht"/>
+                            <constraint firstItem="QMy-lP-R3w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="am3-f2-RDl"/>
+                            <constraint firstItem="m1o-2T-DzX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QMy-lP-R3w" secondAttribute="top" id="dKU-MN-Lca"/>
+                            <constraint firstItem="kHX-Zt-GGF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dWZ-BC-ggx"/>
+                            <constraint firstItem="QMy-lP-R3w" firstAttribute="bottom" secondItem="m1o-2T-DzX" secondAttribute="bottom" id="fbw-gq-haX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZbT-UF-d7R" secondAttribute="trailing" constant="10" id="ft2-C0-g1k"/>
+                            <constraint firstItem="m1o-2T-DzX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QMy-lP-R3w" secondAttribute="leading" id="gol-dK-Fsk"/>
+                            <constraint firstItem="4u7-iI-hjn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZbT-UF-d7R" secondAttribute="bottom" constant="10" id="l49-52-yfo"/>
+                            <constraint firstItem="kHX-Zt-GGF" firstAttribute="top" secondItem="QMy-lP-R3w" secondAttribute="bottom" constant="10" id="m4O-fm-RB4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4u7-iI-hjn" secondAttribute="bottom" constant="10" id="uZO-58-iTB"/>
+                            <constraint firstItem="ZbT-UF-d7R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vDJ-Jd-qr6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="editButton" destination="4u7-iI-hjn" id="t77-gk-Zmc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="85.907046476761622"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder-user" width="200" height="200"/>
+        <image name="slr-camera-2-xxl" width="85" height="85"/>
+    </resources>
 </document>
