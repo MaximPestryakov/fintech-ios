@@ -16,6 +16,13 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("editButton.frame: \(editButton.frame)")
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(back))
+    }
+
+    @objc
+    func back(sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
     }
 
     override func viewWillAppear(_ animated: Bool) {

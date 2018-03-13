@@ -9,6 +9,7 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +17,13 @@
         <!--Profile View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="fintech" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileViewController" id="BYZ-38-t0r" customClass="ProfileViewController" customModule="fintech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="QMy-lP-R3w" customClass="DesignableImage" customModule="fintech" customModuleProvider="target">
-                                <rect key="frame" x="10" y="54" width="355" height="355"/>
+                                <rect key="frame" x="10" y="98" width="355" height="355"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QMy-lP-R3w" secondAttribute="height" multiplier="1:1" id="X0e-QE-Vjp"/>
                                 </constraints>
@@ -33,13 +34,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maxim Pestryakov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHX-Zt-GGF">
-                                <rect key="frame" x="10" y="419" width="355" height="24"/>
+                                <rect key="frame" x="10" y="463" width="355" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Android Developer in Tinkoff Bank, study at Higher School of Economics " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="359" translatesAutoresizingMaskIntoConstraints="NO" id="ZbT-UF-d7R">
-                                <rect key="frame" x="10" y="453" width="355" height="41"/>
+                                <rect key="frame" x="10" y="497" width="355" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +67,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1o-2T-DzX" customClass="DesignableButton" customModule="fintech" customModuleProvider="target">
-                                <rect key="frame" x="265" y="309" width="100" height="100"/>
+                                <rect key="frame" x="265" y="353" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.2470588235" green="0.47058823529999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="aPj-7C-HaM"/>
@@ -85,6 +86,12 @@
                                     <action selector="changePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adH-zX-CdU"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhg-OR-8KV">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Profile" id="jpm-Mi-5BO"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -95,7 +102,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kHX-Zt-GGF" secondAttribute="trailing" constant="10" id="Jr6-TK-lKq"/>
                             <constraint firstItem="QMy-lP-R3w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Kmn-cQ-Qk3"/>
                             <constraint firstItem="ZbT-UF-d7R" firstAttribute="top" secondItem="kHX-Zt-GGF" secondAttribute="bottom" constant="10" id="WMO-QZ-Fht"/>
-                            <constraint firstItem="QMy-lP-R3w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="am3-f2-RDl"/>
+                            <constraint firstItem="bhg-OR-8KV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y5a-Jd-0fU"/>
+                            <constraint firstItem="QMy-lP-R3w" firstAttribute="top" secondItem="bhg-OR-8KV" secondAttribute="bottom" constant="10" id="am3-f2-RDl"/>
                             <constraint firstItem="m1o-2T-DzX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QMy-lP-R3w" secondAttribute="top" id="dKU-MN-Lca"/>
                             <constraint firstItem="kHX-Zt-GGF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dWZ-BC-ggx"/>
                             <constraint firstItem="QMy-lP-R3w" firstAttribute="bottom" secondItem="m1o-2T-DzX" secondAttribute="bottom" id="fbw-gq-haX"/>
@@ -103,13 +111,16 @@
                             <constraint firstItem="m1o-2T-DzX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QMy-lP-R3w" secondAttribute="leading" id="gol-dK-Fsk"/>
                             <constraint firstItem="4u7-iI-hjn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZbT-UF-d7R" secondAttribute="bottom" constant="10" id="l49-52-yfo"/>
                             <constraint firstItem="kHX-Zt-GGF" firstAttribute="top" secondItem="QMy-lP-R3w" secondAttribute="bottom" constant="10" id="m4O-fm-RB4"/>
+                            <constraint firstItem="bhg-OR-8KV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ocy-8p-pLa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4u7-iI-hjn" secondAttribute="bottom" constant="10" id="uZO-58-iTB"/>
                             <constraint firstItem="ZbT-UF-d7R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vDJ-Jd-qr6"/>
+                            <constraint firstItem="bhg-OR-8KV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vfc-FR-Vjk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="editButton" destination="4u7-iI-hjn" id="t77-gk-Zmc"/>
+                        <outlet property="navigationItem" destination="jpm-Mi-5BO" id="CgL-5y-eEG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,13 +134,94 @@
                     <view key="view" contentMode="scaleToFill" id="T1k-Vj-Mvf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAA-SI-l0C" userLabel="Написать сообщение...">
+                                <rect key="frame" x="16" y="748" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E8C-n3-GUD">
+                                <rect key="frame" x="0.0" y="88" width="375" height="652"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="incomingMessage" rowHeight="233" id="gmo-Ge-Lfz" customClass="MessageViewCell" customModule="fintech" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="233"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gmo-Ge-Lfz" id="iet-nY-34f">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdfdsfgdgafsdgdgs df fsdd dsd fdbfdbfvdgfvvvvd vdfb bbdvb vv bvvvf bvrgdfvc gerbg vstrbg cbrgf vbgv " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1V-z1-hSh" customClass="DesignableLabel" customModule="fintech" customModuleProvider="target">
+                                                    <rect key="frame" x="87" y="19" width="281" height="195"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="M1V-z1-hSh" firstAttribute="trailing" secondItem="iet-nY-34f" secondAttribute="trailingMargin" constant="8" id="Agq-6Z-1OB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="M1V-z1-hSh" secondAttribute="bottom" constant="8" id="MuA-ll-H6o"/>
+                                                <constraint firstItem="M1V-z1-hSh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iet-nY-34f" secondAttribute="leading" id="Naf-p7-Ebi"/>
+                                                <constraint firstItem="M1V-z1-hSh" firstAttribute="width" secondItem="iet-nY-34f" secondAttribute="width" multiplier="0.75" id="QEJ-u8-zHh"/>
+                                                <constraint firstItem="M1V-z1-hSh" firstAttribute="top" secondItem="iet-nY-34f" secondAttribute="topMargin" constant="8" id="pIa-6I-g1O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="message" destination="M1V-z1-hSh" id="ihA-Dq-KJJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="outgoingMessage" rowHeight="175" id="e5X-co-fks" customClass="MessageViewCell" customModule="fintech" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="261" width="375" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e5X-co-fks" id="d9W-Ih-xy4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdfdsfgdgafsdgdgs df fsdd dsd fdbfdbfvdgfvvvvd vdfb bbdvb vv bvvvf bvrgdfvc gerbg vstrbg cbrgf vbgv " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCE-YP-meh" customClass="DesignableLabel" customModule="fintech" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="281" height="159"/>
+                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xCE-YP-meh" firstAttribute="top" secondItem="d9W-Ih-xy4" secondAttribute="top" constant="8" id="176-mS-sKy"/>
+                                                <constraint firstItem="xCE-YP-meh" firstAttribute="width" secondItem="d9W-Ih-xy4" secondAttribute="width" multiplier="0.75" id="DLg-PA-vG0"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xCE-YP-meh" secondAttribute="trailing" id="Lps-tv-eHZ"/>
+                                                <constraint firstItem="xCE-YP-meh" firstAttribute="leading" secondItem="d9W-Ih-xy4" secondAttribute="leading" constant="8" id="eIf-WF-a5Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="xCE-YP-meh" secondAttribute="bottom" constant="8" id="wtv-Yd-3TS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="message" destination="xCE-YP-meh" id="fFY-cc-eir"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fny-e4-0JE" id="6jM-dX-b8j"/>
+                                    <outlet property="delegate" destination="fny-e4-0JE" id="aSJ-e8-Tjz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E8C-n3-GUD" firstAttribute="leading" secondItem="Rrn-JN-38Y" secondAttribute="leading" id="0bE-9T-LnO"/>
+                            <constraint firstItem="MAA-SI-l0C" firstAttribute="leading" secondItem="Rrn-JN-38Y" secondAttribute="leading" constant="16" id="EVK-rY-kZD"/>
+                            <constraint firstItem="E8C-n3-GUD" firstAttribute="trailing" secondItem="Rrn-JN-38Y" secondAttribute="trailing" id="HL8-Sa-4wZ"/>
+                            <constraint firstItem="Rrn-JN-38Y" firstAttribute="trailing" secondItem="MAA-SI-l0C" secondAttribute="trailing" constant="16" id="hYT-0e-l08"/>
+                            <constraint firstItem="E8C-n3-GUD" firstAttribute="top" secondItem="Rrn-JN-38Y" secondAttribute="top" id="ssX-oj-yDb"/>
+                            <constraint firstItem="MAA-SI-l0C" firstAttribute="top" secondItem="E8C-n3-GUD" secondAttribute="bottom" constant="8" id="suw-ND-DSJ"/>
+                            <constraint firstItem="MAA-SI-l0C" firstAttribute="bottom" secondItem="Rrn-JN-38Y" secondAttribute="bottom" id="vuj-Du-Bty"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rrn-JN-38Y"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIA-kQ-EeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="865"/>
+            <point key="canvasLocation" x="1348" y="864.53201970443354"/>
         </scene>
         <!--Tinkoff Chat-->
         <scene sceneID="Djw-E8-VLW">
@@ -140,7 +232,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="78" id="uFB-z6-rPV" customClass="ConversationTableViewCell" customModule="fintech" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversation" rowHeight="78" id="uFB-z6-rPV" customClass="ConversationTableViewCell" customModule="fintech" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uFB-z6-rPV" id="mmc-cV-0ak">
@@ -213,7 +305,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Tinkoff Chat" id="8fl-ug-2Fs"/>
                     <connections>
-                        <segue destination="fny-e4-0JE" kind="show" identifier="myseg" id="T2e-b6-Sw3"/>
+                        <segue destination="fny-e4-0JE" kind="show" identifier="openConversation" id="T2e-b6-Sw3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTV-CR-ICQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
