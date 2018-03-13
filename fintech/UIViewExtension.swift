@@ -8,6 +8,10 @@ class DesignableButton: UIButton {
 class DesignableImage: UIImageView {
 }
 
+@IBDesignable
+class DesignableLabel: UILabel {
+}
+
 extension UIView {
 
     @IBInspectable
